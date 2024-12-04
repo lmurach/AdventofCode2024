@@ -1,5 +1,5 @@
 CC = gcc
-DAY = 1b
+DAY = 2a
 CFLAGS = -I ./day$(DAY)/include/ -I ./lnm/include
 DEPS = $(wildcard **/*.h)
 
