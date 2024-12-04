@@ -1,0 +1,3 @@
+[submodule "lnm"]
+	path = lnm
+	url = https://github.com/lmurach/lnm
