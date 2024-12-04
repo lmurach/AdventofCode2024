@@ -16,11 +16,9 @@ int main() {
         getline(&line, &len, fp);
         update_arrays(line, i, array1, array2);
     }
-    insertion_sort(array1, 1000);
-    insertion_sort(array2, 1000);
     unsigned long total = 0;
     for (int i = 0; i < 1000; i++) {
-        total += get_distance(i, array1, array2);
+        total += sim_score(i, array1, array2);
     }
     printf("distance: %lu \n", total);
     return 0;
