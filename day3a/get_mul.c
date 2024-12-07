@@ -74,10 +74,7 @@ unsigned long long get_muls(char* input)
             for (size_t i = 0; i <= regex.re_nsub; i++)
             {
                 char buff[20] = "";
-                // printf("szso[%zu]=%i\n", i, matches[i].rm_so);
-                // printf("szeo[%zu]=%i\n", i, matches[i].rm_eo);
                 memcpy(buff, input + matches[i].rm_so, matches[i].rm_eo - matches[i].rm_so);
-                // printf("group[%zu]: [%s]\n", i, buff);
                 input += matches[i].rm_eo;
                 struct muls mul = get_nums_from_muls(buff);
                 ll.list_add(&ll, &mul);
@@ -97,6 +94,5 @@ unsigned long long get_muls(char* input)
         }
     }
     regfree(&regex);
-    ll.print_list(&ll);
     return add_muls(&ll);
 }
